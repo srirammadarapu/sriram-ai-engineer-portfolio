@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" style="background:#0a0a0b;font-family:Inter,sans-serif;">
+  <defs>
+    <filter id="glow-blue" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-purple" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0e7490;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:0.9"/>
+    </linearGradient>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrow-cyan" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#06b6d4"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#8b5cf6"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="700" font-family="Outfit,sans-serif">LogIntellix Architecture</text>
+  <text x="450" y="58" text-anchor="middle" fill="#94a3b8" font-size="12">AI-Powered Multi-Tenant Log Intelligence Platform</text>
+
+  <!-- Customer Accounts (left column) -->
+  <!-- Account 1 -->
+  <rect x="20" y="80" width="140" height="70" rx="10" fill="rgba(59,130,246,0.08)" stroke="#3b82f6" stroke-width="1" filter="url(#glow-blue)"/>
+  <text x="90" y="104" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600">CUSTOMER AWS ACCOUNT 1</text>
+  <text x="90" y="122" text-anchor="middle" fill="#f8fafc" font-size="11">☁ CloudWatch Logs</text>
+  <text x="90" y="140" text-anchor="middle" fill="#64748b" font-size="9">Account A</text>
+
+  <!-- Account 2 -->
+  <rect x="20" y="170" width="140" height="70" rx="10" fill="rgba(59,130,246,0.08)" stroke="#3b82f6" stroke-width="1" filter="url(#glow-blue)"/>
+  <text x="90" y="194" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600">CUSTOMER AWS ACCOUNT 2</text>
+  <text x="90" y="212" text-anchor="middle" fill="#f8fafc" font-size="11">☁ CloudWatch Logs</text>
+  <text x="90" y="230" text-anchor="middle" fill="#64748b" font-size="9">Account B</text>
+
+  <!-- Account 3 -->
+  <rect x="20" y="260" width="140" height="70" rx="10" fill="rgba(59,130,246,0.08)" stroke="#3b82f6" stroke-width="1" filter="url(#glow-blue)"/>
+  <text x="90" y="284" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600">CUSTOMER AWS ACCOUNT 3</text>
+  <text x="90" y="302" text-anchor="middle" fill="#f8fafc" font-size="11">☁ CloudWatch Logs</text>
+  <text x="90" y="320" text-anchor="middle" fill="#64748b" font-size="9">Account C</text>
+
+  <!-- IAM Role label -->
+  <text x="90" y="360" text-anchor="middle" fill="#8b5cf6" font-size="10" font-weight="600">↑ IAM Cross-Account Role</text>
+
+  <!-- Arrows from accounts to Log Destination -->
+  <line x1="160" y1="115" x2="230" y2="220" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#arrow-blue)"/>
+  <line x1="160" y1="205" x2="230" y2="230" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#arrow-blue)"/>
+  <line x1="160" y1="295" x2="230" y2="245" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#arrow-blue)"/>
+
+  <!-- Log Destination -->
+  <rect x="230" y="195" width="120" height="70" rx="10" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#glow-purple)"/>
+  <text x="290" y="220" text-anchor="middle" fill="#8b5cf6" font-size="18">📍</text>
+  <text x="290" y="240" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600">Log Destination</text>
+  <text x="290" y="256" text-anchor="middle" fill="#94a3b8" font-size="9">Subscription Filter</text>
+
+  <!-- Arrow to Kinesis -->
+  <line x1="350" y1="230" x2="400" y2="230" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow-purple)"/>
+
+  <!-- Kinesis -->
+  <rect x="400" y="195" width="110" height="70" rx="10" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#glow-purple)"/>
+  <text x="455" y="220" text-anchor="middle" fill="#8b5cf6" font-size="18">🌊</text>
+  <text x="455" y="238" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600">Kinesis</text>
+  <text x="455" y="254" text-anchor="middle" fill="#94a3b8" font-size="9">Data Streams</text>
+
+  <!-- Arrow to Lambda -->
+  <line x1="510" y1="230" x2="560" y2="230" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrow-cyan)"/>
+
+  <!-- Lambda (central) -->
+  <rect x="560" y="185" width="120" height="90" rx="10" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-width="2" filter="url(#glow-cyan)"/>
+  <text x="620" y="212" text-anchor="middle" fill="#06b6d4" font-size="18">λ</text>
+  <text x="620" y="232" text-anchor="middle" fill="#f8fafc" font-size="12" font-weight="700">Lambda</text>
+  <text x="620" y="248" text-anchor="middle" fill="#94a3b8" font-size="10">AI Analysis Engine</text>
+  <text x="620" y="263" text-anchor="middle" fill="#64748b" font-size="9">Severity Detection</text>
+
+  <!-- Arrow Lambda → Bedrock -->
+  <line x1="620" y1="185" x2="620" y2="120" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+
+  <!-- Bedrock -->
+  <rect x="560" y="68" width="120" height="52" rx="10" fill="rgba(6,182,212,0.12)" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="620" y="90" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600">Amazon Bedrock</text>
+  <text x="620" y="106" text-anchor="middle" fill="#06b6d4" font-size="10">Nova Lite LLM</text>
+
+  <!-- Arrow Lambda → DynamoDB -->
+  <line x1="680" y1="230" x2="730" y2="270" stroke="#10b981" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- DynamoDB -->
+  <rect x="730" y="255" width="120" height="55" rx="10" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="1.5"/>
+  <text x="790" y="278" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600">DynamoDB</text>
+  <text x="790" y="296" text-anchor="middle" fill="#10b981" font-size="10">Event Store</text>
+
+  <!-- Arrow Lambda → Slack -->
+  <line x1="680" y1="215" x2="730" y2="185" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- Slack Alert -->
+  <rect x="730" y="155" width="120" height="55" rx="10" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="790" y="178" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600">Slack Alert</text>
+  <text x="790" y="196" text-anchor="middle" fill="#f59e0b" font-size="10">Real-time Incidents</text>
+
+  <!-- Frontend section (top right) -->
+  <rect x="590" y="360" width="270" height="155" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="725" y="385" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="600">FRONTEND LAYER</text>
+
+  <!-- S3 -->
+  <rect x="610" y="395" width="95" height="48" rx="8" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="1"/>
+  <text x="657" y="416" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600">Amazon S3</text>
+  <text x="657" y="432" text-anchor="middle" fill="#3b82f6" font-size="9">Static Assets</text>
+
+  <!-- CloudFront -->
+  <rect x="610" y="453" width="95" height="48" rx="8" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="1"/>
+  <text x="657" y="474" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600">CloudFront</text>
+  <text x="657" y="490" text-anchor="middle" fill="#3b82f6" font-size="9">CDN + HTTPS</text>
+
+  <!-- Cognito -->
+  <rect x="725" y="395" width="115" height="106" rx="8" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="782" y="420" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600">Cognito</text>
+  <text x="782" y="438" text-anchor="middle" fill="#8b5cf6" font-size="9">Multi-Tenant Auth</text>
+  <text x="782" y="458" text-anchor="middle" fill="#94a3b8" font-size="9">JWT Tokens</text>
+  <text x="782" y="474" text-anchor="middle" fill="#94a3b8" font-size="9">Role-Based Access</text>
+  <text x="782" y="490" text-anchor="middle" fill="#64748b" font-size="9">Customer Isolation</text>
+
+  <!-- Left side label area -->
+  <rect x="20" y="380" width="200" height="130" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="120" y="402" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600">SECURITY LAYER</text>
+  <text x="120" y="426" text-anchor="middle" fill="#8b5cf6" font-size="11">🔐 IAM Cross-Account</text>
+  <text x="120" y="444" text-anchor="middle" fill="#94a3b8" font-size="9">Least-Privilege Roles</text>
+  <text x="120" y="464" text-anchor="middle" fill="#f8fafc" font-size="11">🛡 GuardDuty</text>
+  <text x="120" y="480" text-anchor="middle" fill="#94a3b8" font-size="9">Threat Detection</text>
+  <text x="120" y="500" text-anchor="middle" fill="#f8fafc" font-size="11">📊 CloudWatch</text>
+  <text x="120" y="516" text-anchor="middle" fill="#94a3b8" font-size="9">Monitoring &amp; Alerts</text>
+
+  <!-- Mid bottom connecting line -->
+  <line x1="290" y1="265" x2="290" y2="350" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="455" y1="265" x2="455" y2="350" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="4,4"/>
+</svg>

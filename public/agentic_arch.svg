@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" style="background:#0a0a0b;font-family:Inter,sans-serif;">
+  <defs>
+    <filter id="glow-green">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-cyan">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arr-g" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#10b981"/>
+    </marker>
+    <marker id="arr-c" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#06b6d4"/>
+    </marker>
+    <marker id="arr-y" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arr-r" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="700" font-family="Outfit,sans-serif">Agentic AI Workflow</text>
+  <text x="450" y="58" text-anchor="middle" fill="#94a3b8" font-size="12">Stateful Multi-Agent Orchestration with LangGraph</text>
+
+  <!-- User Input -->
+  <rect x="20" y="230" width="90" height="60" rx="10" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2" filter="url(#glow-green)"/>
+  <text x="65" y="256" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="700">User</text>
+  <text x="65" y="272" text-anchor="middle" fill="#10b981" font-size="11">Input</text>
+
+  <line x1="110" y1="260" x2="148" y2="260" stroke="#10b981" stroke-width="2" marker-end="url(#arr-g)"/>
+
+  <!-- Planner Agent -->
+  <rect x="148" y="215" width="115" height="90" rx="12" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="2" filter="url(#glow-green)"/>
+  <text x="205" y="244" text-anchor="middle" fill="#10b981" font-size="18">🧠</text>
+  <text x="205" y="266" text-anchor="middle" fill="#f8fafc" font-size="12" font-weight="700">Planner</text>
+  <text x="205" y="282" text-anchor="middle" fill="#f8fafc" font-size="11">Agent</text>
+  <text x="205" y="298" text-anchor="middle" fill="#64748b" font-size="8">Task Decomposition</text>
+
+  <line x1="263" y1="260" x2="300" y2="260" stroke="#10b981" stroke-width="2" marker-end="url(#arr-g)"/>
+
+  <!-- Tool Router -->
+  <rect x="300" y="228" width="95" height="64" rx="10" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-width="2" filter="url(#glow-cyan)"/>
+  <text x="347" y="252" text-anchor="middle" fill="#06b6d4" font-size="16">⚡</text>
+  <text x="347" y="272" text-anchor="middle" fill="#f8fafc" font-size="12" font-weight="700">Tool Router</text>
+  <text x="347" y="286" text-anchor="middle" fill="#64748b" font-size="8">Orchestrator</text>
+
+  <!-- Arrows from router to tools -->
+  <line x1="395" y1="248" x2="430" y2="148" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arr-c)"/>
+  <line x1="395" y1="254" x2="430" y2="215" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arr-c)"/>
+  <line x1="395" y1="268" x2="430" y2="298" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arr-c)"/>
+  <line x1="395" y1="275" x2="430" y2="368" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arr-c)"/>
+
+  <!-- Tool: Web Search -->
+  <rect x="430" y="110" width="120" height="55" rx="10" fill="rgba(59,130,246,0.12)" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="490" y="134" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600">🔍 Web Search</text>
+  <text x="490" y="152" text-anchor="middle" fill="#3b82f6" font-size="9">Tavily / Serper API</text>
+
+  <!-- Tool: Code Exec -->
+  <rect x="430" y="180" width="120" height="55" rx="10" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="490" y="204" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600">⚙ Code Execution</text>
+  <text x="490" y="222" text-anchor="middle" fill="#8b5cf6" font-size="9">Sandboxed Runtime</text>
+
+  <!-- Tool: DB Query -->
+  <rect x="430" y="265" width="120" height="55" rx="10" fill="rgba(245,158,11,0.12)" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="490" y="289" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600">🗄 DB Query</text>
+  <text x="490" y="307" text-anchor="middle" fill="#f59e0b" font-size="9">SQL / Vector Store</text>
+
+  <!-- Tool: API Call -->
+  <rect x="430" y="338" width="120" height="55" rx="10" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="1.5"/>
+  <text x="490" y="362" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600">🌐 API Call</text>
+  <text x="490" y="380" text-anchor="middle" fill="#10b981" font-size="9">External Services</text>
+
+  <!-- Arrows from tools to aggregator -->
+  <line x1="550" y1="148" x2="590" y2="220" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-c)"/>
+  <line x1="550" y1="210" x2="590" y2="235" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#arr-c)"/>
+  <line x1="550" y1="290" x2="590" y2="260" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arr-c)"/>
+  <line x1="550" y1="360" x2="590" y2="280" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-c)"/>
+
+  <!-- Result Aggregator -->
+  <rect x="590" y="215" width="110" height="90" rx="12" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-width="2"/>
+  <text x="645" y="248" text-anchor="middle" fill="#06b6d4" font-size="16">📦</text>
+  <text x="645" y="268" text-anchor="middle" fill="#f8fafc" font-size="12" font-weight="600">Result</text>
+  <text x="645" y="285" text-anchor="middle" fill="#f8fafc" font-size="11">Aggregator</text>
+  <text x="645" y="300" text-anchor="middle" fill="#64748b" font-size="8">Score &amp; Merge</text>
+
+  <line x1="700" y1="260" x2="738" y2="260" stroke="#06b6d4" stroke-width="2" marker-end="url(#arr-c)"/>
+
+  <!-- Critic Agent -->
+  <rect x="738" y="215" width="110" height="90" rx="12" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2"/>
+  <text x="793" y="246" text-anchor="middle" fill="#f59e0b" font-size="16">🔎</text>
+  <text x="793" y="268" text-anchor="middle" fill="#f8fafc" font-size="12" font-weight="600">Critic /</text>
+  <text x="793" y="284" text-anchor="middle" fill="#f8fafc" font-size="11">Reflection</text>
+  <text x="793" y="300" text-anchor="middle" fill="#64748b" font-size="8">Self-Evaluate</text>
+
+  <!-- Decision diamond -->
+  <polygon points="850,360 880,390 850,420 820,390" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="850" y="386" text-anchor="middle" fill="#f8fafc" font-size="9" font-weight="600">?</text>
+  <text x="850" y="398" text-anchor="middle" fill="#ef4444" font-size="8">Decide</text>
+
+  <!-- Line from Critic to Decision -->
+  <line x1="793" y1="305" x2="793" y2="390" stroke="#f59e0b" stroke-width="1.5" fill="none"/>
+  <line x1="793" y1="390" x2="820" y2="390" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arr-y)"/>
+
+  <!-- Done path -->
+  <line x1="880" y1="390" x2="900" y2="390" stroke="#10b981" stroke-width="1.5"/>
+  <text x="895" y="382" text-anchor="end" fill="#10b981" font-size="10" font-weight="600">✓ Done</text>
+  <!-- Response -->
+  <rect x="820" y="440" width="80" height="45" rx="8" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="1.5"/>
+  <text x="860" y="460" text-anchor="middle" fill="#f8fafc" font-size="10" font-weight="600">Final</text>
+  <text x="860" y="474" text-anchor="middle" fill="#10b981" font-size="10">Response</text>
+  <line x1="850" y1="420" x2="850" y2="440" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr-g)"/>
+
+  <!-- Retry path back to Planner -->
+  <path d="M820 390 L790 390 L790 450 L205 450 L205 305" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-r)" fill="none"/>
+  <text x="500" y="468" text-anchor="middle" fill="#ef4444" font-size="10">↺ Retry with refined context</text>
+
+  <!-- ═══ RIGHT PANEL: Memory System ═══ -->
+  <rect x="20" y="80" width="115" height="130" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="77" y="102" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600">MEMORY SYSTEM</text>
+  <rect x="32" y="112" width="91" height="36" rx="6" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="1"/>
+  <text x="77" y="128" text-anchor="middle" fill="#f8fafc" font-size="10" font-weight="600">Short-Term</text>
+  <text x="77" y="142" text-anchor="middle" fill="#3b82f6" font-size="9">Conversation Buffer</text>
+  <rect x="32" y="158" width="91" height="36" rx="6" fill="rgba(8b5cf6,0.1)" stroke="#8b5cf6" stroke-width="1"/>
+  <rect x="32" y="158" width="91" height="36" rx="6" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="77" y="174" text-anchor="middle" fill="#f8fafc" font-size="10" font-weight="600">Long-Term</text>
+  <text x="77" y="188" text-anchor="middle" fill="#8b5cf6" font-size="9">Vector Memory Store</text>
+
+  <!-- Memory arrow to Planner -->
+  <line x1="148" y1="260" x2="123" y2="176" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- MCP Servers -->
+  <rect x="20" y="380" width="115" height="95" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="77" y="402" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600">MCP PROTOCOL</text>
+  <rect x="32" y="412" width="91" height="28" rx="6" fill="rgba(6,182,212,0.1)" stroke="#06b6d4" stroke-width="1"/>
+  <text x="77" y="430" text-anchor="middle" fill="#06b6d4" font-size="9" font-weight="600">MCP Server A</text>
+  <rect x="32" y="448" width="91" height="28" rx="6" fill="rgba(6,182,212,0.1)" stroke="#06b6d4" stroke-width="1"/>
+  <text x="77" y="466" text-anchor="middle" fill="#06b6d4" font-size="9" font-weight="600">MCP Server B</text>
+
+  <!-- MCP arrow to Tool Router -->
+  <line x1="135" y1="435" x2="347" y2="292" stroke="rgba(6,182,212,0.25)" stroke-width="1" stroke-dasharray="4,3"/>
+</svg>
